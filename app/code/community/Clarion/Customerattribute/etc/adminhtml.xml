@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Configuration file for admin menu and access permission
+ *
+ * @category   Mage
+ * @package    Clarion_Customerattribute
+ * @author     Clarion Magento Team
+ */
+-->
+<config>
+    <menu>
+        <customer>
+            <children>
+                <customer_attribute translate="title" module="clarion_customerattribute">
+                    <title>Manage Attributes</title>
+                    <sort_order>601</sort_order> 
+                    <action>adminhtml/customerattribute</action>
+                </customer_attribute>
+            </children>
+        </customer>
+    </menu>
+    <!-- Aceess permission for the node admin/customer/customer_attribute-->
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <customer>
+                        <children>
+                            <customer_attribute translate="title" module="clarion_customerattribute">
+                                <title>Manage Attributes</title>
+                                <sort_order>601</sort_order> 
+                                    <children>
+                                        <save translate="title">
+                                            <title>Save Attribute</title>
+                                            <sort_order>0</sort_order> 
+                                        </save>
+                                        <delete translate="title">
+                                            <title>Delete Attribute</title>
+                                            <sort_order>0</sort_order> 
+                                        </delete>
+                                    </children>
+                            </customer_attribute>
+                        </children>
+                    </customer>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

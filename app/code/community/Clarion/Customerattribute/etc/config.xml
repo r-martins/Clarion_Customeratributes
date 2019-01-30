@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Configuration file
+ *
+ * @category   Mage
+ * @package    Clarion_Customerattribute
+ * @author     Clarion Magento Team
+ */
+-->
+<config>
+    <modules>
+        <Clarion_Customerattribute>
+            <version>0.1.0</version>
+        </Clarion_Customerattribute>
+    </modules>
+    
+    <global>
+        <models>
+            <clarion_customerattribute>
+                <class>Clarion_Customerattribute_Model</class>
+            </clarion_customerattribute>
+        </models>
+        <helpers>
+            <clarion_customerattribute>
+                <class>Clarion_Customerattribute_Helper</class>
+            </clarion_customerattribute>  
+        </helpers>
+        <blocks>
+            <clarion_customerattribute>
+                <class>Clarion_Customerattribute_Block</class>
+            </clarion_customerattribute>
+        </blocks>
+        <!--
+        <eav_attributes>
+            <customer>
+                
+                <sku>
+                    <code>sku</code>
+                    <locked_fields>
+                        <is_global/>
+                        <is_unique/>
+                    </locked_fields>
+                </sku>
+                <url_key>
+                    <code>url_key</code>
+                    <locked_fields>
+                        <is_unique/>
+                    </locked_fields>
+                </url_key>
+                <status>
+                    <code>status</code>
+                    <locked_fields>
+                        <is_configurable/>
+                        <is_filterable/>
+                        <is_filterable_in_search/>
+                    </locked_fields>
+                </status>
+                <visibility>
+                    <code>visibility</code>
+                    <locked_fields>
+                        <is_configurable/>
+                        <is_filterable/>
+                        <is_filterable_in_search/>
+                    </locked_fields>
+                </visibility>
+             
+            </customer>
+        </eav_attributes>
+        
+        <eav_frontendclasses>
+            
+        </eav_frontendclasses>
+           -->
+    </global>
+    
+    <frontend>
+        <layout>
+            <updates>
+                <clarion_customerattribute>
+                        <file>clarion_customerattribute.xml</file>
+                </clarion_customerattribute>
+            </updates>
+        </layout>
+    </frontend>
+    
+    <adminhtml>
+        <layout>
+            <updates>
+                <clarion_customerattribute>
+                    <file>clarion_customerattribute.xml</file>
+                </clarion_customerattribute>
+            </updates>
+        </layout>
+    </adminhtml>
+    
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <clarion_customerattribute after="Mage_Adminhtml">Clarion_Customerattribute_Adminhtml</clarion_customerattribute>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <!-- Clarion_Customerattribute_Adminhtml indicates the path of the admin controller-->
+    <default>
+        <general>
+            <validator_data>
+                <input_types>
+                    <text>text</text>
+                    <textarea>textarea</textarea>
+                    <date>date</date>
+                    <boolean>boolean</boolean>
+                    <multiselect>multiselect</multiselect>
+                    <select>select</select>
+                </input_types>
+            </validator_data>
+        </general>
+    </default>
+</config>

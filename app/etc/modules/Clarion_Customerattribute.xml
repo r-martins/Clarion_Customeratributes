@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Clarion
+ * @package     Clarion_Customerattribute
+ * @author      Clarion Magento Team
+ */
+-->
+<config>
+    <modules>
+        <Clarion_Customerattribute>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Clarion_Customerattribute>
+    </modules>
+</config>

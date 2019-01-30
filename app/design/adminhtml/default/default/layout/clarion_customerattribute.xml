@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @category    design
+ * @package     default_default
+ * @author      Clarion Magento Team
+ */
+-->
+
+<layout version="0.1.0">
+    <adminhtml_customerattribute_index>
+        <reference name="content">
+            <block type="clarion_customerattribute/adminhtml_customerattribute" name="customerattribute.grid.container" />
+        </reference>
+    </adminhtml_customerattribute_index>
+    
+    <adminhtml_customerattribute_edit>
+       <reference name="js">
+            <block type="adminhtml/template" name="clarion_customerattribute_edit_js" template="clarion_customerattribute/attribute/js.phtml"></block>
+        </reference>
+    </adminhtml_customerattribute_edit>
+</layout>
